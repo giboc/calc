@@ -109,10 +109,20 @@ $(document).ready(function() {
             else if ($("#second-number").text()=="")
                 alert("error, second number missing"); 
             else{
-                var num1 = $("#first-number").text().parseInt();
-                alert(num1);
+                var num1 = $("#first-number").text();
+                var num2 = $("#second-number").text();
+                num1 = parseInt(num1);
+                num2 = parseInt(num2);
                 if ( $("#operator").text() == "+")
-                    console.log("filler");
+                    $("#result").text(num1+num2);
+                    if ( $("#operator").text() == "-")
+                    $("#result").text(num1-num2);
+                    if ( $("#operator").text() == "*")
+                    $("#result").text(num1*num2);
+                    if ( $("#operator").text() == "/")
+                    $("#result").text(num1/num2);
+                    if ( $("#operator").text() == "^")
+                    $("#result").text( Math.pow(num1,num2));
             }
     
     });
