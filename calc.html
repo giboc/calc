@@ -99,10 +99,10 @@ $(document).ready(function() {
             $("#operator").text("/");
         else
             $("#operator").text("^");
-    }
-        else if(this.value == "equals"){
-            alert("test");
-            if($("#operator").text()=="")
+    });
+
+    $(".equal").on("click", function(){
+        if($("#operator").text()=="")
                 alert("error, no operator given");
             else if( $("#first-number").text()=="")
                 alert("error, first number missing");
@@ -112,14 +112,15 @@ $(document).ready(function() {
                 var num1 = $("#first-number").text().parseInt();
                 alert(num1);
                 if ( $("#operator").text() == "+")
-                    ;
+                    console.log("filler");
             }
     
-        }
+    });
+       
             
     
         
-    });
+    
 
 
 
